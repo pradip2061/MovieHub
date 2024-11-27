@@ -13,7 +13,7 @@ function Features() {
     <div className='feature'>
     <div className='intro'>
 <div className='text'>
-  <h1> Welcome To </h1>
+  <h1> Welcome To MovieHub</h1>
   <h2> Discover The Ultimate  Movie Experience</h2>
 </div>
 <div className='img'>
