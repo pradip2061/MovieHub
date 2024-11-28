@@ -31,7 +31,7 @@ toast.success('logout successfully')
     }
     useEffect(()=>{
       const getmovies = async()=>{
-        await axios.get('http://localhost:3000/movie/get')
+        await axios.get('https://moviefind-2.onrender.com/movie/get')
         .then((response)=>{
           setData(response.data.data)
         })
@@ -49,7 +49,7 @@ username = profile[0].username
  userimage = 'https://cdn-icons-png.flaticon.com/128/219/219970.png'
  username = 'unknown'
 }
-await axios.post('http://localhost:3000/movie/create',{
+await axios.post('https://moviefind-2.onrender.com/movie/create',{
   moviename,
 movietype,
 movieduration,
@@ -74,7 +74,7 @@ if(response.status==200){
 }
 const trending = async(e)=>{
   e.preventDefault()
-  await axios.post('http://localhost:3000/movie/trending',{
+  await axios.post('https://moviefind-2.onrender.com/movie/trending',{
     movienames,
   movielanguage,
   image,
@@ -95,7 +95,7 @@ const trending = async(e)=>{
   }
   useEffect(()=>{
     const gettrend =async()=>{
-    await axios.get('http://localhost:3000/movie/gettrend')
+    await axios.get('https://moviefind-2.onrender.com/movie/gettrend')
      .then((response)=>{
       setMovieTrend(response.data.data)
       })
@@ -111,7 +111,7 @@ display?setDisplay(false):setDisplay(true)
 }
 useEffect(()=>{
   const getprofile= async()=>{
-await axios.get('http://localhost:3000/movie/getprofile',{
+await axios.get('https://moviefind-2.onrender.com/movie/getprofile',{
   headers:{
       "Authorization":`${tokens}`
   }
