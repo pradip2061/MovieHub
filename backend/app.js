@@ -8,7 +8,7 @@ require('dotenv').config();
 
 app.use(express.static('./storage'))
 app.use(cors({
-    origin:'https://moviehub2061.netlify.app',
+    origin:'*',
     credentials: true,
 }))
 app.use(cookieparser())
@@ -24,7 +24,7 @@ app.use('/movie', userRouter)
 
 
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3000
 app.listen(PORT,()=>{
     console.log(`the project is running at port ${PORT}`)
 })
