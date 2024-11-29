@@ -8,7 +8,7 @@ require('dotenv').config();
 
 app.use(express.static('./storage'))
 app.use(cors({
-    origin:['http://localhost:5173/','https://imaginative-crepe-0b9174.netlify.app']
+    origin:['http://localhost:5173/','https://moviefind-e9mt88yj2-pradip2061s-projects.vercel.app/']
 }))
 app.use(cookieparser())
 app.use(express.json())
@@ -17,11 +17,6 @@ app.use(express.json())
 connectToDatabase()
 
 app.use('/movie', userRouter)
-
-
-
-
-
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT,()=>{
