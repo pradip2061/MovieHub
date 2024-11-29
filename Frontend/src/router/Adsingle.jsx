@@ -6,7 +6,7 @@ function Adsingle() {
     const {id}=useParams()
     const navigate=useNavigate()
     const deletes= async()=>{
-await axios.delete(`https://moviefind-2.onrender.com/movie/delete/${id}`)
+await axios.delete(`https://moviefind-6kpj.onrender.com/delete/${id}`)
 .then((response)=>{
 if(response.status==200){
     toast.success('delete successfully')

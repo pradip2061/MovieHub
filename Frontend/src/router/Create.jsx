@@ -23,7 +23,7 @@ let username;
          userimage = 'https://cdn-icons-png.flaticon.com/128/219/219970.png'
          username = 'unknown'
        }
-await axios.post('https://moviefind-2.onrender.com/movie/create',{
+await axios.post('https://moviefind-6kpj.onrender.com/movie/create',{
 moviename,
 movietype,
 movieduration,
@@ -48,7 +48,7 @@ if(response.status==200){
 
     useEffect(()=>{
       const getprofile= async()=>{
-  await axios.get('https://moviefind-2.onrender.com/movie/getprofile',{
+  await axios.get('https://moviefind-6kpj.onrender.com/movie/getprofile',{
       headers:{
           "Authorization":`${token}`
       }

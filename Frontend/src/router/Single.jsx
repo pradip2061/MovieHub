@@ -27,7 +27,7 @@ const token = localStorage.getItem('token')
 const createapi = async(e)=>{
   e.preventDefault()
  try {
-  await axios.post(`https://moviefind-2.onrender.com/movie/comment/${id}`,{text},{
+  await axios.post(`https://moviefind-6kpj.onrender.com/movie/comment/${id}`,{text},{
     headers:{
       "Authorization":`${token}`
     }
@@ -48,7 +48,7 @@ const createapi = async(e)=>{
 
 const getcomment =async()=>{
  try {
-  await axios.get(`https://moviefind-2.onrender.com/movie/get/${id}`)
+  await axios.get(`https://moviefind-6kpj.onrender.com/movie/get/${id}`)
   .then((response)=>{
     setComment(response.data.data)
     setResponse('')
@@ -63,7 +63,7 @@ const getcomment =async()=>{
 }
 
 const updateapi =async()=>{
-await axios.patch(`https://moviefind-2.onrender.com/movie/update/${id}`,{
+await axios.patch(`https://moviefind-6kpj.onrender.com/movie/update/${id}`,{
   moviename,
   movietype,
   movieduration,
@@ -92,7 +92,7 @@ await axios.patch(`https://moviefind-2.onrender.com/movie/update/${id}`,{
 
     const singleapi = async()=>{
       try{
-await axios.get(`https://moviefind-2.onrender.com/movie/getsingle/${id}`)
+await axios.get(`https://moviefind-6kpj.onrender.com/movie/getsingle/${id}`)
 .then((response)=>{
   const movieData= response.data.data
   const image = movieData.image
@@ -126,7 +126,7 @@ setMovieName(movieData.moviename || '');
     click?setClick(false):setClick(true)
   }
   const deletecomment = async(id)=>{
-    await axios.delete(`https://moviefind-2.onrender.com/movie/deletecomment/${id}`,
+    await axios.delete(`https://moviefind-6kpj.onrender.com/movie/deletecomment/${id}`,
        {
          headers:{
            Authorization:token
