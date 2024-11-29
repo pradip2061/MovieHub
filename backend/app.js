@@ -8,8 +8,7 @@ require('dotenv').config();
 
 app.use(express.static('./storage'))
 app.use(cors({
-    origin:['https://moviehub2061.netlify.app','http://localhost:5173'],
-    credentials: true,
+    origin:['https://moviehub2061.netlify.app','http://localhost:5173']
 }))
 app.use(cookieparser())
 app.use(express.json())
