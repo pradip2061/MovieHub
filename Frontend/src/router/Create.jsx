@@ -16,14 +16,14 @@ let userimage;
 let username;
     const create= async(e)=>{
         e.preventDefault()
-        if(profile !== 0){
-          userimage = profile[0].image
-        username = profile[0].username
-       }else{
-         userimage = 'https://cdn-icons-png.flaticon.com/128/219/219970.png'
+        if(profile.length<0){
+        userimage = 'https://cdn-icons-png.flaticon.com/128/219/219970.png'
          username = 'unknown'
+       }else{
+        userimage = profile[0].image
+        username = profile[0].username
        }
-await axios.post('https://moviefind-6kpj.onrender.com/movie/create',{
+await axios.post('http://localhost:3000/movie/create',{
 moviename,
 movietype,
 movieduration,
@@ -48,7 +48,7 @@ if(response.status==200){
 
     useEffect(()=>{
       const getprofile= async()=>{
-  await axios.get('https://moviefind-6kpj.onrender.com/movie/getprofile',{
+  await axios.get('http://localhost:3000/movie/getprofile',{
       headers:{
           "Authorization":`${token}`
       }

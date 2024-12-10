@@ -11,7 +11,7 @@ const jwt = require('jsonwebtoken')
     }
     const decoded = jwt.verify(token,process.env.secret_key)
     const userid = decoded.userid
-    image = "https://moviefind-6kpj.onrender.com/"+ req.file.filename
+    image = "http://localhost:3000/"+ req.file.filename
     await profile.create({
         image,
         username,

@@ -18,7 +18,7 @@ const navigate = useNavigate()
       toast.error('invalid email',{className:'toast'})
       return
      }
-await axios.post('https://moviefind-6kpj.onrender.com/movie/sign',{username,email,password})
+await axios.post('http://localhost:3000/movie/sign',{username,email,password})
   .then((response)=>{
     console.log(response)
     if(response.request.status == 200){

@@ -18,7 +18,7 @@ const trendings = async(req,res)=>{
             messege:"image is required"
         })
     } else{
-        image="https://moviefind-6kpj.onrender.com/"+req.file.filename
+        image="http://localhost:3000/"+req.file.filename
         
         try{
             await trending.create({
