@@ -1,24 +1,27 @@
-const express = require('express')
-const app = express()
-const connectToDatabase = require('./database/index')
-const cors = require('cors')
-const cookieparser = require('cookie-parser')
-const userRouter = require('./router/userRouter')
+const express = require('express');
+const app = express();
+const connectToDatabase = require('./database/index');
+const cors = require('cors');
+const cookieparser = require('cookie-parser');
+const userRouter = require('./router/userRouter');
 require('dotenv').config();
 
-app.use(express.static('./storage'))
+app.use(express.static('./storage'));
+
 app.use(cors({
-     origin:['http://localhost:5173','https://moviefind-o61pg5yyw-pradip2061s-projects.vercel.app']
-}))
-app.use(cookieparser())
-app.use(express.json())
-//app.use(express.static('./storage'))
+    origin: ['http://localhost:5173', 'https://moviefind-o61pg5yyw-pradip2061s-projects.vercel.app'],
+    credentials: true
+}));
 
-connectToDatabase()
+app.use(cookieparser());
+app.use(express.json());
 
-app.use('/movie', userRouter)
+connectToDatabase();
 
-const PORT = process.env.PORT || 3000
-app.listen(PORT,()=>{
-    console.log(`the project is running at port ${PORT}`)
-})
+app.use('/movie', userRouter);
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`The project is running at port ${PORT}`);
+});
