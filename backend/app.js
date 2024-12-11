@@ -8,7 +8,7 @@ require('dotenv').config();
 
 app.use(express.static('./storage'))
 app.use(cors({
-     origin:['http://localhost:5173']
+     origin:['http://localhost:5173','https://moviefind-o61pg5yyw-pradip2061s-projects.vercel.app']
 }))
 app.use(cookieparser())
 app.use(express.json())

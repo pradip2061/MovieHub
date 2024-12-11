@@ -35,7 +35,7 @@ const[input,setInput]=useState('')
 
 useEffect(()=>{
   const gettrend = async()=>{
-    await axios.get('http://localhost:3000/movie/gettrend')
+    await axios.get('https://moviefind-902o.onrender.com/movie/gettrend')
     .then((response)=>{
   setMovie(response.data.data)
     })
