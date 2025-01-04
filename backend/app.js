@@ -9,7 +9,7 @@ require('dotenv').config();
 app.use(express.static('./storage'));
 
 app.use(cors({
-    origin: ['https://moviefind-five.vercel.app/ '],
+    origin: ['https://moviefind-five.vercel.app'],
     credentials: true
 }));
 
