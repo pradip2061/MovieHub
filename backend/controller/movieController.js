@@ -13,7 +13,7 @@ const createmovie = async(req,res)=>{
     if(!req.file){
         image="https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp"
     } else{
-        image = "http://localhost:3000/"+req.file.filename
+        image = "https://moviefind-1.onrender.com/"+req.file.filename
     }
     await movies.create({
         moviename,
@@ -63,7 +63,7 @@ const update = async (req, res) => {
             });
         }
         const imagepath = data.image;
-            const length = "http://localhost:3000/".length;
+            const length = "https://moviefind-1.onrender.com/".length;
             const newpath = imagepath.slice(length);
     
             // Delete the existing image file
@@ -73,7 +73,7 @@ const update = async (req, res) => {
                     return;
                 }
             });
-            image = "http://localhost:3000/" + req.file.filename}else{
+            image = "https://moviefind-1.onrender.com/" + req.file.filename}else{
                 data = await movies.findById(id);
 
                 if(data.userid == userid){
