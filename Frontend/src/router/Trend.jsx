@@ -6,7 +6,7 @@ function Trend() {
     const {id}=useParams()
     const navigate=useNavigate()
     const deletes= async()=>{
-await axios.delete(`https://moviefind-902o.onrender.com/movie/deletetrend/${id}`)
+await axios.delete(`http://localhost:3000/movie/deletetrend/${id}`)
 .then((response)=>{
 if(response.status==200){
     toast.success('delete successfully')

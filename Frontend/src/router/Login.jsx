@@ -10,7 +10,7 @@ function Login() {
   const login = async(e)=>{
     e.preventDefault()
 
- await axios.post('https://moviefind-902o.onrender.com/movie/login',{ email,password},
+ await axios.post('http://localhost:3000/movie/login',{ email,password},
   {
     method:"POST",
     headers:{
