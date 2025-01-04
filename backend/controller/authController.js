@@ -76,3 +76,4 @@ const jwt = require('jsonwebtoken')
     }
 
     module.exports = {signup,login,redirect}
+    
