@@ -8,7 +8,7 @@ function Profile() {
     const[image,setImage]=useState(null)
     const token = localStorage.getItem('token')
     const profile = async()=>{
-await axios.post('http://localhost:3000/movie/profile',{name,image},{
+await axios.post('https://moviefind-1.onrender.com/profile',{name,image},{
     method:'POST',
     headers:{
     "content-type":'multipart/form-data',

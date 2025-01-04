@@ -23,7 +23,7 @@ let username;
         userimage = profile[0].image
         username = profile[0].username
        }
-await axios.post('http://localhost:3000/movie/create',{
+await axios.post('https://moviefind-1.onrender.com/movie/create',{
 moviename,
 movietype,
 movieduration,
@@ -48,7 +48,7 @@ if(response.status==200){
 
     useEffect(()=>{
       const getprofile= async()=>{
-  await axios.get('http://localhost:3000/movie/getprofile',{
+  await axios.get('https://moviefind-1.onrender.com/movie/getprofile',{
       headers:{
           "Authorization":`${token}`
       }

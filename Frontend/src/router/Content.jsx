@@ -19,7 +19,7 @@ const[trend,setTrend]=useState([])
 const[show,setShow]=useState(false)
 useEffect(()=>{
 const get = async()=>{
-await axios.get('http://localhost:3000/movie/get')
+await axios.get('https://moviefind-1.onrender.com/movie/get')
 .then((response)=>{
   setMovie(response.data.data)
 })
@@ -52,7 +52,7 @@ useEffect(()=>{
 
 useEffect(()=>{
   const gettrend = async()=>{
-await axios.get('http://localhost:3000/movie/gettrend')
+await axios.get('https://moviefind-1.onrender.com/movie/gettrend')
 .then((response)=>{
 setTrend(response.data.data)
 })

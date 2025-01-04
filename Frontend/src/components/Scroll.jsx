@@ -14,7 +14,7 @@ show?setShow(false):setShow(true)
 }
 useEffect(()=>{
   const getprofile= async()=>{
-await axios.get('http://localhost:3000/movie/getprofile',{
+await axios.get('https://moviefind-1.onrender.com/movie/getprofile',{
   headers:{
       "Authorization":`${token}`
   }
