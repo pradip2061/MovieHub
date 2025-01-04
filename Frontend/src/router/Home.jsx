@@ -15,7 +15,7 @@ function Home() {
   useEffect(()=>{
     const tokens=localStorage.getItem('token')
     const navigates =async()=>{
-      await axios.post('https://moviefind-1.onrender.com/redirect',{tokens} ,{
+      await axios.post('https://moviefind-1.onrender.com/movie/redirect',{tokens} ,{
         method:"POST",
         headers:{
           "Content-Type":"application/json"
