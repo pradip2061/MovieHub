@@ -105,7 +105,7 @@ setTimeout(() => {
       !input?<>
       <h1>Trending Movies</h1>
     <div className='hot'>
-    
+    {
      trend.map((item)=>(
         <Swiper className="swipper" key={item._id}>
         <SwiperSlide>
@@ -113,7 +113,7 @@ setTimeout(() => {
         <img src={item.image} className='trend-image'/>
         </SwiperSlide>
       </Swiper>
-      )) 
+      )) }
     </div></>:<div className='shimmer-hot'>
       <ShimmerDiv mode="light" height={150} width={300}  />
       </div>
