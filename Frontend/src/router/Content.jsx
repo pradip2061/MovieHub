@@ -9,6 +9,7 @@ import {toast} from "react-toastify"
 import img1 from "../assets/witcher.png"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css";
+import{ShimmerDiv} from 'shimmer-effects-react'
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
@@ -105,30 +106,42 @@ setTimeout(() => {
       <h1>Trending Movies</h1>
     <div className='hot'>
     {
-      trend.map((item)=>(
+     trend>0? trend.map((item)=>(
         <Swiper className="swipper" key={item._id}>
         <SwiperSlide>
         <button className='hotbutton'>Hot</button>
         <img src={item.image} className='trend-image'/>
         </SwiperSlide>
       </Swiper>
-      ))
+      )): <div className='shimmer-hot'>
+      <ShimmerDiv mode="light" height={150} width={300}  />
+      </div>
     }
     </div></>:null
     }
    
   <div className='wrap'>
-    <h1 style={{marginTop:40}}>All Movies</h1>
+    <h1>All Movies</h1>
     <div className="app">
     {filter.length > 0 ? 
           filter.map((item) => (
          <Card key={item._id} data={item} />
         )) 
-         :
-          <div className='error'>
-          <img src={img} className='novideo'/>
-          <h1>No Videos Found</h1>
-          </div> 
+         :<>
+         {
+          Array.from({length:10}).map((el,i)=>{
+            return  <div className='shimmer' key={i}>
+            <ShimmerDiv mode="light" height={150} width={300} />
+         <div className='shimmer-text'>
+         <ShimmerDiv mode="light"  height={40} width={40} rounded={20} />
+         <ShimmerDiv mode="light" height={10} width={100} />
+         </div>
+         </div>
+          })
+         }
+        
+         </>
+       
         }
     </div>
     </div>

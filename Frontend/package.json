@@ -19,6 +19,7 @@
     "react-router-dom": "^6.27.0",
     "react-tilt": "^1.0.2",
     "react-toastify": "^10.0.6",
+    "shimmer-effects-react": "^1.0.4",
     "swiper": "^11.1.14"
   },
   "devDependencies": {

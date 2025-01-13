@@ -16,6 +16,7 @@ html,body{
 /*home page css*/
 .backhome{
   background-repeat: no-repeat;
+  height: 725px;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -227,7 +228,6 @@ height: 420px;
   url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&q=80') center/cover,
   url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80') center/cover;
 background-blend-mode: overlay;
-
 display: flex;
 justify-content: center;
 align-items: center;
@@ -986,6 +986,7 @@ border: 2px solid white;
 }
 .wrap >h1{
   color: white;
+  margin-top: 40px;
 }
 .header{
   display: flex;
@@ -1282,6 +1283,20 @@ border-radius:34px;
   position: relative;
   overflow: hidden;
 }
+.shimmer{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.shimmer-text{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.shimmer-hot{
+  margin-top: 20px;
+  margin-right: 400px;
+}
 /* css mobile responsive*/
 @media  (max-width:480px) {
   .backhome{
@@ -1310,7 +1325,7 @@ margin-right: 20px;
 .left .title{
   display: flex;
   font-size: 30px;
-  margin-right: 120px;
+  margin-right: 80px;
   align-items: center;
 }
 .right button{
@@ -1321,6 +1336,8 @@ margin-right: 20px;
 .mainNav{
   display: flex;
  width: 100%;
+ gap:0px;
+ padding-inline: 10px;
 }
 .right{
   display: flex;
@@ -1365,6 +1382,16 @@ color: white;
   margin-right: 80px;
   padding-inline: 190px;
 }
+.shimmer{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.shimmer-text{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 /* css responsive for feature page */
 .intro{
   width: 70%;
@@ -1372,9 +1399,6 @@ color: white;
   flex-direction: column;
   }
 
-  .contact-div{
-    padding-inline: 30px;
-  }
 .img {
   margin-right: 160px;
   margin-top: 40px;
@@ -1396,7 +1420,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-padding-inline: 20px;
+padding-right: 10px;
 }
 
 .feature{
@@ -1413,13 +1437,13 @@ padding-inline: 20px;
 .contact-div{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
    position: relative; 
   overflow-x: hidden;
+  padding-right: 25px;
+  
 }
 .top h1{
-  font-size: 25px;
+  font-size: 35px;
 }
 
 .top h3{
@@ -1462,23 +1486,33 @@ display: none;
   justify-content: center;
   align-items: center;
   width: 20px;
-  gap: 110px;
+  gap: 60px;
+  margin-top: 20px;
 } 
+.rights{
+  gap:10px;
+}
 .search input{
-width: 300px;
+width: 200px;
+height: 40px;
 }
-.searchicon{
-padding: 0%;
-padding-right: 5px;
-}
+
 .search {
-  position: absolute;
+  /* position: absolute;
   display: flex;
   justify-content: center;
   margin-top: 150px;
   margin-left: 60px;
   width: 76%;
-  align-items: center;
+  align-items: center; */
+width: 270px;
+border: 1px solid red;
+display: flex;
+align-items: center;
+position: absolute;
+margin-top: 150px;
+height: 43px;
+margin-left: 60px;
 }
 .rights button{
   width:60px;
@@ -1498,6 +1532,9 @@ padding-right: 5px;
     margin-top: 80px;
     padding-left: 20px;
    }
+   .popular h1{
+    margin-left: 20px;
+   }
    .trend-image{
     width: 400px;
     height: 400px;
@@ -1511,6 +1548,7 @@ padding-right: 5px;
   }
   .menu{
     position: absolute;
+    margin-left: 20px;
   }
   .options{
     width: 60px;
@@ -1530,9 +1568,16 @@ padding-right: 5px;
     width: 300px;
   }
   .wrap{
-    margin-top: 50px;
     margin-left: 20px;
   }
+  .wrap h1{
+  margin-top: 0px;
+  }
+  .shimmer{
+  padding-bottom: 30px;
+  }
+
+
   .user-followings{
     display: flex;
     gap: 30px;
@@ -1565,12 +1610,15 @@ padding-right: 5px;
     .error{
       width: 100%;
       margin: 0;
-      margin-left: 80px;
+      margin-left: 30px;
     }
     /* toastify css */
    .toast{
     width: 250px;
     margin-left: 230px;
     margin-top: 40px;
+   }
+   .card{
+    width: 500px;
    }
   }
