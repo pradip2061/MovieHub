@@ -31,8 +31,7 @@ function Login() {
     } else{
       toast.success('log in successfully',{className:'toast'})
     navigate('/content')}
- }
- if(response.status == 400){
+ }else{
   toast.error('log in failed',{className:'toast'})
  }
   
