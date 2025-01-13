@@ -32,7 +32,7 @@ function Login() {
       toast.success('log in successfully',{className:'toast'})
     navigate('/content')}
  }
- if(response.data == 0){
+ if(!response.data ){
   toast.error('log in failed',{className:'toast'})
  }
  })
