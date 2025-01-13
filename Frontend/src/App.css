@@ -1543,7 +1543,8 @@ margin-left: 60px;
     height: 400px;
   }
   .hot{
-    width: 100%;
+    width: 90%;
+    padding: 20px;
   }
   
   .swiper{
