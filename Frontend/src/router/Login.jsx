@@ -31,11 +31,10 @@ function Login() {
     } else{
       toast.success('log in successfully',{className:'toast'})
     navigate('/content')}
- }else{
+ }
+ if(response.data == 0){
   toast.error('log in failed',{className:'toast'})
  }
-  
- 
  })
   }
 const token = localStorage.getItem('token')
