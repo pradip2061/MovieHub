@@ -140,6 +140,7 @@ setComments(response.data.messege)
    
   return (
     <>
+    <div className='single-data'>
     <div className='contentnavs'>
         <div  className='lefts'>
         <div  className='titles'>
@@ -190,6 +191,7 @@ setComments(response.data.messege)
  </div>
   </div>:null
   }
+  </div>
   </div>
   </>
   )

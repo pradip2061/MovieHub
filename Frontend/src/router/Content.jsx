@@ -20,7 +20,7 @@ const[trend,setTrend]=useState([])
 const[show,setShow]=useState(false)
 useEffect(()=>{
 const get = async()=>{
-await axios.get('https://moviefind-1.onrender.com/movie/get')
+await axios.get('https://moviefind-1.onrender.com/movie/get') 
 .then((response)=>{
   setMovie(response.data.data)
 })
