@@ -106,7 +106,7 @@ setTimeout(() => {
       <h1>Trending Movies</h1>
     <div className='hot'>
     {
-     trend>0?trend.map((item)=>(
+     trend.length == 0 ?trend.map((item)=>(
         <Swiper className="swipper" key={item._id}>
         <SwiperSlide>
         <button className='hotbutton'>Hot</button>
